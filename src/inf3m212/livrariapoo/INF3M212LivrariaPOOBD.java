@@ -23,7 +23,7 @@ import util.Validadores;
  *
  * @author jbferraz
  */
-public class INF3M212LivrariaPOO {
+public class INF3M212LivrariaPOOBD {
 
     public static CCliente cadCliente = new CCliente();
     public static CEditora cadEditora = new CEditora();

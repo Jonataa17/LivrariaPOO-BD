@@ -5,7 +5,7 @@
  */
 package controller;
 
-import inf3m212.livrariapoo.INF3M212LivrariaPOO;
+import inf3m212.livrariapoo.INF3M212LivrariaPOOBD;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import model.Livro;
@@ -62,11 +62,11 @@ public class CVendaLivro {
     public void mockVendaLivros() {
         VendaLivro vl1 = new VendaLivro();
         vl1.setIdVendaLivro(this.geraID());
-        vl1.setIdCliente(INF3M212LivrariaPOO.cadCliente.getClienteCPF("987654321"));
+        vl1.setIdCliente(INF3M212LivrariaPOOBD.cadCliente.getClienteCPF("987654321"));
         vl1.setDataVenda(LocalDate.parse("2023-03-14"));
         ArrayList<Livro> livros1 = new ArrayList<>();
-        livros1.add(INF3M212LivrariaPOO.cadLivro.getLivroISBN("82467319222"));
-        livros1.add(INF3M212LivrariaPOO.cadLivro.getLivroISBN("789654123"));
+        livros1.add(INF3M212LivrariaPOOBD.cadLivro.getLivroISBN("82467319222"));
+        livros1.add(INF3M212LivrariaPOOBD.cadLivro.getLivroISBN("789654123"));
         vl1.setLivros(livros1);
         vl1.setSubTotal((float) 50.00);
         this.addVendaLivro(vl1);

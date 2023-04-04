@@ -5,7 +5,7 @@
  */
 package controller;
 
-import inf3m212.livrariapoo.INF3M212LivrariaPOO;
+import inf3m212.livrariapoo.INF3M212LivrariaPOOBD;
 import java.util.ArrayList;
 import model.Cliente;
 import model.Livro;
@@ -67,7 +67,7 @@ public class CLivro {
         li1.setIsbn("789654123");
         li1.setEstoque(10);
         li1.setPreco((float) 16.47);
-        li1.setIdEditora(INF3M212LivrariaPOO.cadEditora.getEditoraCNPJ("45378245000195"));
+        li1.setIdEditora(INF3M212LivrariaPOOBD.cadEditora.getEditoraCNPJ("45378245000195"));
         this.addLivro(li1);
         Livro li2 = new Livro();
         li2.setIdLivro(this.geraID());
@@ -77,7 +77,7 @@ public class CLivro {
         li2.setIsbn("82467319222");
         li2.setEstoque(20);
         li2.setPreco((float) 33.99);
-        li2.setIdEditora(INF3M212LivrariaPOO.cadEditora.getEditoraCNPJ("45378245000195"));
+        li2.setIdEditora(INF3M212LivrariaPOOBD.cadEditora.getEditoraCNPJ("45378245000195"));
         this.addLivro(li2);
     }
 
