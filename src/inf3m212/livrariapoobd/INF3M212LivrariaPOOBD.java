@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package inf3m212.livrariapoo;
+package inf3m212.livrariapoobd;
 
 import controller.CCliente;
 import controller.CEditora;

@@ -5,7 +5,7 @@
  */
 package controller;
 
-import inf3m212.livrariapoo.INF3M212LivrariaPOOBD;
+import inf3m212.livrariapoobd.INF3M212LivrariaPOOBD;
 import java.util.ArrayList;
 import model.Cliente;
 import model.Livro;
