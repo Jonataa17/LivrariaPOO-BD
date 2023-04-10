@@ -3,19 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package services;
+package dao;
 
 /**
  *
  * @author 182120038
  */
-public class ServicosFactory {
-
-    private static ClienteServicos cServicos = new ClienteServicos();
-
-
-    public static ClienteServicos getClienteServicos(){
-        return cServicos;
-    }
+public class EditoraDAO {
     
 }

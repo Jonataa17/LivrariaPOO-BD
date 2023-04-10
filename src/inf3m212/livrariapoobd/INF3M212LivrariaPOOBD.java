@@ -17,6 +17,8 @@ import model.Cliente;
 import model.Editora;
 import model.Livro;
 import model.VendaLivro;
+import services.ClienteServicos;
+import services.ServicosFactory;
 import util.Validadores;
 
 /**
@@ -94,6 +96,7 @@ public class INF3M212LivrariaPOOBD {
         String cnpj = null;
         String endereco;
         String telefone;
+        ClienteServicos clienteS = ServicosFactory.getClienteServicos();
 
         System.out.println("-- Cadastro Cliente --");
         System.out.print("Informe o CPF: ");
@@ -116,7 +119,7 @@ public class INF3M212LivrariaPOOBD {
 
         } while (!cpfis);
 
-        if (cadCliente.getClienteCPF(cpf) != null) {
+        if (clienteS.buscarClienteByCPF(cpf).getCpf() != null) {
             System.out.println("Cliente já cadastrado!");
         } else {
             System.out.print("Informe o seu nome: ");
@@ -128,7 +131,9 @@ public class INF3M212LivrariaPOOBD {
             idCliente = cadCliente.geraID();
 
             Cliente cli = new Cliente(idCliente, nomeCliente, cpf, cnpj, endereco, telefone);
-            cadCliente.addCliente(cli);
+
+            clienteS.cadCliente(cli);
+            //cadCliente.addCliente(cli);
             System.out.println("Cliente cadastrado com sucesso!");
         }
 
@@ -138,11 +143,12 @@ public class INF3M212LivrariaPOOBD {
         System.out.println("-- Deletar Cliente --");
         System.out.print("Informe o CPF: ");
         String cpf = leia.next();
-
+        ClienteServicos clienteS = ServicosFactory.getClienteServicos();
         if (Validadores.isCPF(cpf)) {
-            Cliente cli = cadCliente.getClienteCPF(cpf);
+            Cliente cli = clienteS.buscarClienteByCPF(cpf);
             if (cli != null) {
-                cadCliente.removeCliente(cli);
+                // cadCliente.removeCliente(cli);
+                clienteS.deletarCliente(cpf);
                 System.out.println("Cliente deletado com sucesso!");
             } else {
                 System.out.println("Cliente não consta na base de dados!");
@@ -154,7 +160,8 @@ public class INF3M212LivrariaPOOBD {
 
     public static void listarCliente() {
 
-        for (Cliente cli : cadCliente.getClientes()) {
+        ClienteServicos clienteS = ServicosFactory.getClienteServicos();
+        for (Cliente cli : clienteS.getClientes()) {
             System.out.println("---->");
             System.out.println("CPF:\t" + cli.getCpf());
             System.out.println("Nome:\t" + cli.getNomeCliente());
@@ -384,11 +391,13 @@ public class INF3M212LivrariaPOOBD {
     }
 
     private static void editarCliente() {
+        ClienteServicos clienteS = ServicosFactory.getClienteServicos();
         System.out.println("-- Editar Cliente --");
         System.out.print("Informe o CPF: ");
         String cpf = leia.nextLine();
         if (Validadores.isCPF(cpf)) {
-            Cliente cli = cadCliente.getClienteCPF(cpf);
+            //Cliente cli = cadCliente.getClienteCPF(cpf);
+            Cliente cli = clienteS.buscarClienteByCPF(cpf);
             if (cli != null) {
                 System.out.println("1 - Nome:\t" + cli.getNomeCliente());
                 System.out.println("2 - Endereço:\t" + cli.getEndereco());
@@ -422,6 +431,8 @@ public class INF3M212LivrariaPOOBD {
                         System.out.println("Opção inválida!");
                         break;
                 }
+                
+                clienteS.atualizarCliente(cli);
                 System.out.println("Cliente:\n" + cli.toString());
             } else {
                 System.out.println("Cliente não cadastrado!");

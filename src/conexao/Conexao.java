@@ -24,7 +24,7 @@ public class Conexao {
     //cria uma conexão com a senha do BD
     private static String pass = "";
 
-    public static Connection getConexao() {
+    public static Connection getConexao() throws SQLException {
         //inicia cenexão nula
         Connection c = null;
 
@@ -33,9 +33,9 @@ public class Conexao {
             c = DriverManager.getConnection(url, user, pass);
         } catch (SQLException e) {
             //caso haja erro na conexão
-            System.out.println("Erro ao conectar no Banco de Dados!" + e.getMessage());
+            throw new SQLException("Erro ao conectar !\n"
+                    + e.getMessage());
         }
-
         return c;
     }
 }
