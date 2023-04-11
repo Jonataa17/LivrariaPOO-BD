@@ -13,9 +13,14 @@ public class ServicosFactory {
 
     private static ClienteServicos cServicos = new ClienteServicos();
 
-
-    public static ClienteServicos getClienteServicos(){
+    public static ClienteServicos getClienteServicos() {
         return cServicos;
     }
-    
+
+    private static EditoraServicos eServicos = new EditoraServicos();
+
+    public static EditoraServicos getEditoraServicos() {
+        return eServicos;
+    }
+
 }
