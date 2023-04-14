@@ -36,7 +36,7 @@ public class EditoraServicos {
         return eDAO.getEditoraByDoc(cnpj);
     }//fim buscarEditoraByCNPJ
 
-    public ArrayList<Editora> getClientes() {
+    public ArrayList<Editora> getEditoras() {
         EditoraDAO eDAO = DAOFactory.getEditoraDAO();
         return eDAO.getEditoraDAO();
     }//fim ArrayList

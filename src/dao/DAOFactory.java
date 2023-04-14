@@ -15,12 +15,24 @@ public class DAOFactory {
 
     public static ClienteDAO getClienteDAO() {
         return cDAO;
-    }
+    }//fim ClienteDAO
 
     private static EditoraDAO eDAO = new EditoraDAO();
 
     public static EditoraDAO getEditoraDAO() {
         return eDAO;
-    }
+    }//fim EditoraDAO
+
+    private static LivroDAO lDAO = new LivroDAO();
+
+    public static LivroDAO getLivroDAO() {
+        return lDAO;
+    }//fim LivroDAO
+
+    private static VendaLivroDAO vlDAO = new VendaLivroDAO();
+
+    public static VendaLivroDAO getVendaLivroDAO() {
+        return vlDAO;
+    }//fim VendaLivroDAO
 
 }

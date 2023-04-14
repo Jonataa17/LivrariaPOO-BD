@@ -15,12 +15,24 @@ public class ServicosFactory {
 
     public static ClienteServicos getClienteServicos() {
         return cServicos;
-    }
+    }//fim ClienteServicos
 
     private static EditoraServicos eServicos = new EditoraServicos();
 
     public static EditoraServicos getEditoraServicos() {
         return eServicos;
-    }
+    }//fim EditoraServicos
+
+    private static LivroServicos lServicos = new LivroServicos();
+
+    public static LivroServicos getLivroServicos() {
+        return lServicos;
+    }//fim LivroServicos
+
+    private static VendaLivroServicos vlServicos = new VendaLivroServicos();
+
+    public static VendaLivroServicos getVendaLivros() {
+        return vlServicos;
+    }//fim VendaLivroServicos
 
 }

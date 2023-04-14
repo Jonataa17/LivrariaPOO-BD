@@ -3,13 +3,8 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/182120038/Documents/NetBeansProjects/INF3M212-LivrariaPOO-BD/src/services/EditoraServicos.java</file>
-            <file>file:/C:/Users/182120038/Documents/NetBeansProjects/INF3M212-LivrariaPOO-BD/src/dao/EditoraDAO.java</file>
-            <file>file:/C:/Users/182120038/Documents/NetBeansProjects/INF3M212-LivrariaPOO-BD/src/dao/LivroDAO.java</file>
-            <file>file:/C:/Users/182120038/Documents/NetBeansProjects/INF3M212-LivrariaPOO-BD/src/dao/DAOFactory.java</file>
+            <file>file:/C:/Users/182120038/Documents/NetBeansProjects/INF3M212-LivrariaPOO-BD/src/dao/VendaLivroDAO.java</file>
             <file>file:/C:/Users/182120038/Documents/NetBeansProjects/INF3M212-LivrariaPOO-BD/src/inf3m212/livrariapoobd/INF3M212LivrariaPOOBD.java</file>
-            <file>file:/C:/Users/182120038/Documents/NetBeansProjects/INF3M212-LivrariaPOO-BD/src/services/LivroServicos.java</file>
-            <file>file:/C:/Users/182120038/Documents/NetBeansProjects/INF3M212-LivrariaPOO-BD/src/services/ServicosFactory.java</file>
         </group>
     </open-files>
 </project-private>
